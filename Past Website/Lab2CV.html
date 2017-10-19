@@ -9,7 +9,13 @@
 
 <!--JavaScript Command line starts here ############################## -->
 <script type="text/javascript">
-  
+        
+    //Function to swap style sheets
+    function swapStyleSheet(sheet){
+        document.getElementById('pagestyle').setAttribute('href', sheet);
+    }
+    
+        
     //Function for displaying and hiding text
     function showme(id, linkid)
     {
@@ -83,8 +89,8 @@
 		<a href=#workex> Work Experience </a> <br>
         <a href=#table1> Grades </a> <br>
 		<hr/></h3>
-   
-        
+        <button onclick="swapStyleSheet('Casual.css')">Casual CV</button>
+        <button onclick="swapStyleSheet('Professional.css')">Professional CV</button>
 		</div>
 		
 		
