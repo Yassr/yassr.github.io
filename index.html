@@ -2,7 +2,7 @@
 <html>
 <!-- This is my comment and this is my code - Yassr Shaar -->
 	<head>
-		<title>Yassr Shaar CV</title>
+		<title>Yassr Shaar Image Processing Blog</title>
 	</head>
     
 	<link id="pagestyle" rel="stylesheet" type="text/css" href="Casual.css">
@@ -18,12 +18,12 @@
    
     if (divid.style.display == 'block')
         {
-        toggleLink.innerHTML = "<button type='button'> Show Answer </button>";
+        toggleLink.innerHTML = "<button type='button'> Show Blog </button>";
         divid.style.display = 'none';
         }
     else
         {
-        toggleLink.innerHTML = "<button type='button'> Hide Answer </button>";
+        toggleLink.innerHTML = "<button type='button'> Hide Blog </button>";
         divid.style.display = 'block';
         }
     }         
@@ -43,87 +43,75 @@
     <div class="slider">
 	<input type="radio" name="slide_switch" id="id1"  checked="checked"/>
 	<label for="id1">
-		<img src="me1.jpg" width="100"/>
+		<img src="Team.jpg" width="100"/>
 	</label>
-	<img src="me1.jpg"/>
+	<img src="Team.jpg"/>
 	
 	<!--Lets show the second image by default on page load-->
 	<input type="radio" name="slide_switch" id="id2"/>
 	<label for="id2">
-		<img src="me2.jpg" width="100"/>
+		<img src="Project.jpg" width="100"/>
 	</label>
-	<img src="me2.jpg"/>
+	<img src="project.jpg"/>
 	
 	<input type="radio" name="slide_switch" id="id3"/>
 	<label for="id3">
-		<img src="me3.jpg" width="100"/>
+		<img src="result.jpg" width="100"/>
 	</label>
-	<img src="me3.jpg"/>
+	<img src="result.jpg"/>
     </div>
         
     <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
 		
         
-		<div id ="title">Yassr Shaar
+		<div id ="title"> Yassr Shaar</br>Team Colours
           <font size ="5">  <ul>
                 <li>Contact Details:</li>
 					<ol>
-                        <li>yassrnote@gmail.com</li>
+                        <li>C14328571@mydit.ie</li>
 						<li><a href ="https://www.linkedin.com/in/YassrShaar">https://www.linkedin.com/in/YassrShaar</a></li>
                 </ol>
-              <li>1a Gleann na Smol, Oldbawn, Tallaght, Dublin 24</li>
             </ul></font>
 				
 		</div>
 		<div id ="cont">
 		<h3><hr/>
 		<a name="Table"> <b> Table of contents </b> </a> <br/>
-		<a href=#prof> Profile </a><br>
-		<a href=#educ> Education </a> <br>
-		<a href=#workex> Work Experience </a> <br>
-        <a href=#table1> Grades </a> <br>
-		<hr/></h3>
-   
-        
-		</div>
+		<a href=#blog1> Blog Post 1 - 10/09/2017 </a><br>
+		<a href=#blog2> Blog Post 2 - 24/09/2017 </a> <br>
+		<a href=#blog3> Blog Post 3 - 10/10/2017 </a> <br>
+		<a href=#blog4> Blog Post 4 - 19/10/2017 </a> <br>
+		<hr/></h3></div>
+		
+
+		
+		<a  id="blog1" onclick="showme('blog1a', this.id);"> <button type="button">Show Blog</button><font size="6">  Blog Post 1 - 19/10/2017 </font></a> <br>
+			<div  id ="blog1a" style="display:none"><font size = "5"><font size="6">Blog Post 1 - 19/10/2017 </font>
+			I'm an adaptable student seeking to further improve my skills through practical work using the knowledge and skills I have gained in college and through my experience and involvements outside my course. I have many skills in computing including C, Python &amp; Java programming, SQL Database programming and Linux/Unix shell script programming. Along with other infrastructure modules like program design, Human computer interaction and microprocessors.</font></div>
+		
+		<a  id="blog2" onclick="showme('blog2a', this.id);"> <button type="button">Show Blog</button><font size="6">  Blog Post 2 - 19/10/2017 </font></a> <br>
+			<div  id ="blog2a" style="display:none"><font size = "5"><font size="6">Blog Post 2 - 24/09/2017 </font>
+			Split :
+			26/09/17
+			 
+			April : Binary object detection
+			Robert : GUI
+			Yassr : Exploring Colour Range
+			Connor : Identify Object in an image
+
+			Currently what the team is working on is researching the different ways we will be approaching the Project and doing research on what we need to know to make it happen.
+			I am currently researching colour range and how that can be used. I learnt that the BGR colour spectrum might not be the best for this project and am now investigating using HSV and create better thresholds and making two lower and two upper thresh holds based on HSV.</font></div>
 		
 		
-		<div id = "prof">
-		<a name="prof"><b> <font size ="6"> Profile</font> </b> </a> <br><hr>
-		<font size = "5">I'm an adaptable student seeking to further improve my skills through practical work using the knowledge and skills I have gained in college and through my experience and involvements outside my course. I have many skills in computing including C, Python &amp; Java programming, SQL Database programming and Linux/Unix shell script programming. Along with other infrastructure modules like program design, Human computer interaction and microprocessors.
-		I feel confident in applying the skills that I have acquired from my college modules and through working in a team through modules that where heavily team based like Team Robotics and my involvements in The Robocode national competition and my volunteering in The WebSummit in 2015 and 2014.
-		I have acquired skills in Cisco networking, programming, databases and HTML giving me a wide variety in abilities that I can use in the work place.
-		Working in a shop as cashier and stockroom packaging I have experience in customer care and working with database technology giving me an idea of how a database system is used in a running environment.</h3>
-		<hr></div></font>
-		
-		<div id = "educ">
-		<a name ="educ"><b> <font size="6">Education</font> </b> </a> <br>
-		<hr>
-		<font size ="5">2014 - Current&emsp;</font><font size ="5">BSc(Hons) Computer Science(Infrastructure), Dublin Institute of Technology Kevin Street.&emsp;</font><br>
-		<font size ="5">2009 - 2014&emsp;&emsp;</font><font size ="5"><a href ="http://colaisteeanna.ie/">Colaiste Enna C.B.S</a>, Ballyroan , Dublin 16. Principal: Mr. Brendan McCauley. Phone (01)4931767 &emsp;</font> <hr>
-		</div>
-		
-		
-		<div id = "workex">
-		<a name ="workex"><b> <font size="6">Work Experience</font> </b> </a> <br>
-		<hr>
-		<font size = "5"><strong><a href="http://www.fallonandbyrne.com/">Fallon and Byrne</a>: 24th October 2015.<br>
-            Stockroom packaging and Cashier.</strong><br>
-            Sorting the stock that arrives into the stockroom and updating the stock list and identifying what is needed in the store and taking what is needed and tidying them onto the store shelves. As a cashier I am to be approachable and provide the best of service to ensure customer satisfaction.</font><br><br>
-            
-            <font size = "5"><strong>Representative of the School of Computing at DIT: April 28th 2015 - April 20th 2016.</strong><br>
-            Responsible for any issues that may occur in any course in the school of computing and must be approachable by other students and lecturers. I help the student Union in setting up events for the students of my College and attend council meetings with lecturers and the chair of the school of computing.</font><br><br>
-            
-            <font size = "5"><strong>Student Council at Dublin Institute of Technology: November 5th 2014 - April 20th 2016.</strong><br>
-            Responsible for speaking on behalf of my school to bring awareness to any issues that maybe present and to try and resolve them and ensure a solution is implemented. Being approachable and reach out to students of the college to learn of any concerns that they may be having.</font><br><br>
-            
-            <font size = "5"><strong>Media and IT Officer for D.I.T. ISOC: March 5th  2015 - February 25th 2016.</strong><br>
-            Oversaw social media accounts. Responsible for creating posters for each event using Photoshop.
-            Designed posters, tickets, calendars and certificates. Had to meet strict deadlines in poster making which forced me to become more creative.</font><br><br><hr>
-            
-        </div>
+		<a  id="blog3" onclick="showme('blog3a', this.id);"> <button type="button">Show Blog</button><font size="6">  Blog Post 3 - 19/10/2017 </font></a> <br>
+			<div  id ="blog3a" style="display:none"><font size = "5"><font size="6">Blog Post 3 - 19/10/2017 </font>
+			I'm an adaptable student seeking to further improve my skills through practical work using the knowledge and skills I have gained in college and through my experience and involvements outside my course. I have many skills in computing including C, Python &amp; Java programming, SQL Database programming and Linux/Unix shell script programming. Along with other infrastructure modules like program design, Human computer interaction and microprocessors.</font></div>
+			
+		<a  id="blog4" onclick="showme('blog4a', this.id);"> <button type="button">Show Blog</button><font size="6">  Blog Post 4 - 19/10/2017 </font></a> <br>
+			<div  id ="blog4a" style="display:none"><font size = "5"><font size="6">Blog Post 4 - 19/10/2017 </font>
+			I'm an adaptable student seeking to further improve my skills through practical work using the knowledge and skills I have gained in college and through my experience and involvements outside my course. I have many skills in computing including C, Python &amp; Java programming, SQL Database programming and Linux/Unix shell script programming. Along with other infrastructure modules like program design, Human computer interaction and microprocessors.</font></div>
     
-    <div id= "table1"><table style="border-collapse:collapse;">
+    <!--<div id= "table1"><table style="border-collapse:collapse;">
             <thead>
                 <tr>
                     <th colspan="2" style=" color:red">Grades</th>
@@ -149,49 +137,7 @@
                     <td style="margin:5px;border-left:1px solid black;">85%</td>
                 </tr>
             </tbody>
-        </table></div>
-    
-    <div class ="quest">
-        <ol>
-            <li>
-                How old are you?
-                <br>
-                <a id="toggler" onclick="showme('answer', this.id);"><button type="button"> Show Answer </button></a>
- 
-                <div id="answer" style="display:none;">
-                    <b>20 years old.</b>
-                </div>
-            </li>
-           
-            <li>
-                What are the Specs of your PC?
-                <br>
-                <a id="toggler2" onclick="showme('answer2', this.id);"><button type="button"> Show Answer </button></a>
- 
-                <div id="answer2" style="display:none;">
-                    <b>i5 6600k, ASUS i170 MoBo, Corsair h115i Liquid Cooler, 24gb DDR4 Ram, 250gb SSD,1.75tb HDD, Gigabyte GTX 1070 G1 gaming</b>
-                </div>
-            </li>
-            <li>
-                what Phone are you currently using?
-                <br>
-                <a id="toggler3" onclick="showme('answer3', this.id);"><button type="button"> Show Answer </button></a>
- 
-                <div id="answer3" style="display:none;">
-                    <b>The Galaxy Note 5 32gb</b>
-                </div>
-            </li>
-        </ol>
-    </div>
-        	
-		
-	
-    
-    
-    
-    
-    
-    
+        </table></div> -->    
     
    <!--JavaScript Command line Starts here ############################## -->
         <script>//Function to display date

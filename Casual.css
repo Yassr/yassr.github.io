@@ -10,7 +10,6 @@ text-align:left;
 
 body
 {
-	
 	background-color: #F9F9F9;
 	background-repeat: no-repeat;
 	background-image : url("imageback.jpg");
@@ -19,8 +18,98 @@ body
 
 #DIT { position: absolute; left: 20px; top: 5px;}
 
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
+    background-color: aqua;
+    
+}
+
+#cont {position: absolute; 
+    top: 260px; 
+    float: left;
+    padding-left: 3em;
+    }
+
+#blog1{
+	position: absolute; 
+    top: 450px; float: left; 
+    margin: 20px;
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    }
+#blog1a{
+	position: absolute; 
+	top: 495px; float: left; 
+    margin: 20px;
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+	
+}
+
+#blog2{position: absolute; 
+    top: 750px; 
+    float: left; 
+    margin: 20px; 
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    }
+#blog2a{position: absolute; 
+    top: 795px; 
+    float: left; 
+    margin: 20px; 
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    }
+
+#blog3 {position: absolute;
+    top: 910px; 
+    float: left; 
+    margin: 20px; 
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    }
+	
+#blog3a {position: absolute;
+    top: 955px; 
+    float: left; 
+    margin: 20px; 
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    }
+	
+#blog4 {position: absolute;
+    top: 1200px; 
+    float: left; 
+    margin: 20px; 
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    }
+#blog4a {position: absolute;
+    top: 1245px; 
+    float: left; 
+    margin: 20px; 
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    }
+
+
+#table1{
+    position: absolute;
+    top: 1430px;
+    float: left;
+    margin: 20px;
+    padding-left: 1.8em;
+    font-size: 22px;
+}
+
 .slider{ 
-    width: 380px;
+    width: 435px;
+	height: 425px;
     position: relative;  
     float: right;
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
@@ -43,7 +132,7 @@ body
 	/*Lets add some spacing for the thumbnails*/
 	margin: 18px 0 0 18px;
 	border: 3px solid #966 ;
-	margin-top: 390px;
+	margin-top: 430px;
 	float: left;
 	cursor: pointer;
 	transition: all 0.5s;
@@ -53,6 +142,8 @@ body
 }
 
 .slider label img{
+	height: 60px;
+	width: 60px;
 	display: block;
     border-radius: 8px;
 }
@@ -77,54 +168,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 /*Clicking on any thumbnail now should activate the image related to it*/
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0; 
-    background-color: aqua;
-    
-}
 
-#cont {position: absolute; 
-    top: 260px; 
-    float: left;
-    padding-left: 3em;
-    }
-
-#prof{position: absolute; 
-    top: 450px; float: left; 
-    margin: 20px;
-    padding-left: 1.8em;
-    padding-right: 1.8em;
-    }
-
-#educ {position: absolute; 
-    top: 750px; 
-    float: left; 
-    margin: 20px; 
-    padding-left: 1.8em;
-    padding-right: 1.8em;
-    }
-
-#workex {position: absolute;
-    top: 910px; 
-    float: left; 
-    margin: 20px; 
-    padding-left: 1.8em;
-    padding-right: 1.8em;
-    }
-
-#table1{
-    position: absolute;
-    top: 1430px;
-    float: left;
-    margin: 20px;
-    padding-left: 1.8em;
-    font-size: 22px;
-}
 .quest{position: absolute;
     top: 1600px;
     float: left; 
