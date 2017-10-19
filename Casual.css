@@ -4,15 +4,16 @@ top: 70px;
 right: 750px;
 font-size:70px;
 text-align:left;
-
-
+color: white;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: black;
 }
 
 body
 {
 	background-color: #F9F9F9;
-	background-repeat: no-repeat;
-	background-image : url("imageback.jpg");
+	background-repeat: repeat;
+	background-image : url("imageback2.jpg");
 	
 }
 
@@ -36,8 +37,10 @@ hr {
     }
 
 #blogs{
+	border: 3px solid #ccc;
+	background: white;
 	position: absolute; 
-    top: 475px; float: left; 
+    top: 500px; float: left; 
     margin: 20px;
     padding-left: 1.8em;
     padding-right: 1.8em;
