@@ -35,67 +35,14 @@ hr {
     padding-left: 3em;
     }
 
-#blog1{
+#blogs{
 	position: absolute; 
-    top: 450px; float: left; 
+    top: 475px; float: left; 
     margin: 20px;
     padding-left: 1.8em;
     padding-right: 1.8em;
     }
-#blog1a{
-	position: absolute; 
-	top: 495px; float: left; 
-    margin: 20px;
-    padding-left: 1.8em;
-    padding-right: 1.8em;
-	
-}
 
-#blog2{position: absolute; 
-    top: 750px; 
-    float: left; 
-    margin: 20px; 
-    padding-left: 1.8em;
-    padding-right: 1.8em;
-    }
-#blog2a{position: absolute; 
-    top: 795px; 
-    float: left; 
-    margin: 20px; 
-    padding-left: 1.8em;
-    padding-right: 1.8em;
-    }
-
-#blog3 {position: absolute;
-    top: 910px; 
-    float: left; 
-    margin: 20px; 
-    padding-left: 1.8em;
-    padding-right: 1.8em;
-    }
-	
-#blog3a {position: absolute;
-    top: 955px; 
-    float: left; 
-    margin: 20px; 
-    padding-left: 1.8em;
-    padding-right: 1.8em;
-    }
-	
-#blog4 {position: absolute;
-    top: 1200px; 
-    float: left; 
-    margin: 20px; 
-    padding-left: 1.8em;
-    padding-right: 1.8em;
-    }
-#blog4a {position: absolute;
-    top: 1245px; 
-    float: left; 
-    margin: 20px; 
-    padding-left: 1.8em;
-    padding-right: 1.8em;
-    }
 
 
 #table1{
