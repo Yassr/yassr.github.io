@@ -86,27 +86,47 @@
 
 		<div id="blogs">
 		<a  id="blog1" onclick="showme('blog1a', this.id);"> <font size="6">  Blog Post 1 - 19/10/2017 </font> <br> <button type="button">Show Blog</button></a> <br>
-			<div  id ="blog1a" style="display:none"><font size = "5"><font size="6">Blog Post 1 - 19/10/2017 </font>
-			I'm an adaptable student seeking to further improve my skills through practical work using the knowledge and skills I have gained in college and through my experience and involvements outside my course. I have many skills in computing including C, Python &amp; Java programming, SQL Database programming and Linux/Unix shell script programming. Along with other infrastructure modules like program design, Human computer interaction and microprocessors.</font></div>
+			<div  id ="blog1a" style="display:none"><font size="6">Blog Post 1 - 19/10/2017 </font><font size = "4">
+			This is the First blog. The team I am in is team Colours, With April, Robert and Connor</font></div>
 		
 		<a  id="blog2" onclick="showme('blog2a', this.id);"><font size="6">  Blog Post 2 - 19/10/2017 </font><br><button type="button">Show Blog</button></a> <br>
-			<div  id ="blog2a" style="display:none"><font size = "5"><font size="6">Blog Post 2 - 24/09/2017 </font>
+			<div  id ="blog2a" style="display:none"><font size="6">Blog Post 2 - 24/09/2017 </font><font size = "4">
 			<p>Split :</p>
 			<p>26/09/17</p>
 			<p>April : Binary object detection</p>
 			<p>Robert : GUI</p>
 			<p>Yassr : Exploring Colour Range</p>
 			<p>Connor : Identify Object in an image</p>
-			<p>Currently what the team is working on is researching the different ways we will be approaching the Project and doing research on what we need to know to make it happen.<br />I am currently researching colour range and how that can be used. I learnt that the BGR colour&nbsp;spectrum might not be the best for this project and am now investigating using HSV&nbsp;and create better thresholds and making two lower and two upper thresh holds&nbsp;based on HSV.</p</font></div>
+			<p>Currently what the team is working on is researching the different ways we will be approaching the Project and doing research on what we need to know to make it happen.<br />I am currently researching colour range and how that can be used. I learnt that the BGR colour&nbsp;spectrum might not be the best for this project and am now investigating using HSV&nbsp;and create better thresholds and making two lower and two upper thresh holds&nbsp;based on HSV.<br> <img src="blog2img.png"/></p</font></div>
 		
 		
 		<a  id="blog3" onclick="showme('blog3a', this.id);"> <font size="6">  Blog Post 3 - 19/10/2017 </font><br><button type="button">Show Blog</button></a> <br>
-			<div  id ="blog3a" style="display:none"><font size = "5"><font size="6">Blog Post 3 - 19/10/2017 </font>
-			I'm an adaptable student seeking to further improve my skills through practical work using the knowledge and skills I have gained in college and through my experience and involvements outside my course. I have many skills in computing including C, Python &amp; Java programming, SQL Database programming and Linux/Unix shell script programming. Along with other infrastructure modules like program design, Human computer interaction and microprocessors.</font></div>
+			<div  id ="blog3a" style="display:none"><font size="6">Blog Post 3 - 19/10/2017 </font><font size = "4">
+			<pre>A problem we ran into when doing multi colour&nbsp;thresholding was that the image we are working with the cups (objects) are too close and the detection was being thrown off and weird.&nbsp;<br /><br /></pre>
+			<pre>boundaries = [ #BGR </pre>
+			<pre>([198, 111, 255], [128, 4, 234]), #Magenta&nbsp; </pre>
+			<pre>([86, 31, 4], [220, 88, 50]), </pre>
+			<pre>([25, 146, 190], [62, 174, 250]), </pre>
+			<pre>([103, 86, 65], [145, 133, 128]), </pre>
+			<pre>([103, 86, 65], [145, 133, 128]), </pre>
+			<pre>([103, 86, 65], [145, 133, 128])]<br /># loop over the boundaries</pre>
+			<pre>for (lower, upper) in boundaries: # create NumPy arrays from the boundaries </pre>
+			<pre>lower = np.array(lower, dtype = "uint8") </pre>
+			<pre>upper = np.array(upper, dtype = "uint8")<br /># find the colors within the specified boundaries and apply&nbsp;the mask </pre>
+			<pre>mask = cv2.inRange(image, lower, upper) </pre>
+			<pre>output = cv2.bitwise_and(image, image, mask = mask)</pre>
+			<p>We switched to binary thresholding and tried to detect the objects so that once the objects are detected we can try&nbsp;separate&nbsp;them&nbsp;and detect the colours.&nbsp;</p>
+			<pre>G = cv2.cvtColor(I, cv2.COLOR_BGR2GRAY)<br />#Adaptive thresholding</pre>
+			<pre>B = cv2.adaptiveThreshold(G, maxValue = 255, adaptiveMethod = cv2.ADAPTIVE_THRESH_GAUSSIAN_C, thresholdType = cv2.THRESH_BINARY, blockSize = 15, C = 7)<br />That didnt give the result we had hoped but we are currently trying the separate the objects</pre>
+			<br><p>This week we tried to implement morphing&nbsp;and Erosion&nbsp;</p>
+			<p>NewMask = cv2.erode(ROI,shape)</p>
+			<p>NewMask = cv2.morphologyEx(B,cv2.MORPH_OPEN,shape</p><br>
+			<img src="team.jpg"/></font></div>
+			
 			
 		<a  id="blog4" onclick="showme('blog4a', this.id);"><font size="6">  Blog Post 4 - 19/10/2017 </font><br><button type="button">Show Blog</button></a> <br>
-			<div  id ="blog4a" style="display:none"><font size = "5"><font size="6">Blog Post 4 - 19/10/2017 </font>
-			I'm an adaptable student seeking to further improve my skills through practical work using the knowledge and skills I have gained in college and through my experience and involvements outside my course. I have many skills in computing including C, Python &amp; Java programming, SQL Database programming and Linux/Unix shell script programming. Along with other infrastructure modules like program design, Human computer interaction and microprocessors.</font></div>
+			<div  id ="blog4a" style="display:none"><font size="6">Blog Post 4 - 19/10/2017 </font><font size = "5">
+			Blog 4.</font></div>
 		</div>
     
     <!--<div id= "table1"><table style="border-collapse:collapse;">
