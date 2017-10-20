@@ -57,9 +57,9 @@
 	
 	<input type="radio" name="slide_switch" id="id3"/>
 	<label for="id3">
-		<img src="result.jpg" width="100"/>
+		<img src="result1s.jpg" width="100"/>
 	</label>
-	<img src="result.jpg"/>
+	<img src="result1s.jpg"/>
     </div>
         
     <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
@@ -86,11 +86,11 @@
 		
 
 		<div id="blogs">
-		<a  id="blog1" onclick="showme('blog1a', this.id);"> <font size="6">  Blog Post 1 - 19/10/2017 </font> <br> <button type="button">Show Blog</button></a> <br>
+		<a  id="blog1" onclick="showme('blog1a', this.id);"> <font size="6">  Blog Post 1 - 10/09/2017 </font> <br> <button type="button">Show Blog</button></a> <br>
 			<div  id ="blog1a" style="display:none"><font size="6">Blog Post 1 - 19/10/2017 </font><font size = "4">
 			<br>This is the First blog. The team I am in is team Colours, With April, Robert and Connor</font></div>
 		
-		<a  id="blog2" onclick="showme('blog2a', this.id);"><font size="6">  Blog Post 2 - 19/10/2017 </font><br><button type="button">Show Blog</button></a> <br>
+		<a  id="blog2" onclick="showme('blog2a', this.id);"><font size="6">  Blog Post 2 - 24/09/2017 </font><br><button type="button">Show Blog</button></a> <br>
 			<div  id ="blog2a" style="display:none"><font size="6">Blog Post 2 - 24/09/2017 </font><font size = "4">
 			<p>Split :</p>
 			<p>26/09/17</p>
@@ -101,7 +101,7 @@
 			<p>Currently what the team is working on is researching the different ways we will be approaching the Project and doing research on what we need to know to make it happen.<br />I am currently researching colour range and how that can be used. I learnt that the BGR colour&nbsp;spectrum might not be the best for this project and am now investigating using HSV&nbsp;and create better thresholds and making two lower and two upper thresh holds&nbsp;based on HSV.<br> <img src="blog2img.png"/></p</font></div>
 		
 		
-		<a  id="blog3" onclick="showme('blog3a', this.id);"> <font size="6">  Blog Post 3 - 19/10/2017 </font><br><button type="button">Show Blog</button></a> <br>
+		<a  id="blog3" onclick="showme('blog3a', this.id);"> <font size="6">  Blog Post 3 - 10/10/2017 </font><br><button type="button">Show Blog</button></a> <br>
 			<div  id ="blog3a" style="display:none"><font size="6">Blog Post 3 - 19/10/2017 </font><font size = "4">
 			<pre>A problem we ran into when doing multi colour&nbsp;thresholding was that the image we are working with the cups (objects) are too close and the detection was being thrown off and weird.&nbsp;<br /><br /></pre>
 			<pre>boundaries = [ #BGR </pre>
@@ -127,7 +127,32 @@
 			
 		<a  id="blog4" onclick="showme('blog4a', this.id);"><font size="6">  Blog Post 4 - 19/10/2017 </font><br><button type="button">Show Blog</button></a> <br>
 			<div  id ="blog4a" style="display:none"><font size="6">Blog Post 4 - 19/10/2017 </font><font size = "4">
-			<br>Blog 4.</font></div>
+			<<h4 class="referenceString selectable">References :</h4>
+			<h4 class="referenceString selectable">Cmm.ensmp.fr. (2017).&nbsp;<em>The Watershed Transformation page</em>. [online] Available at: http://cmm.ensmp.fr/~beucher/wtshed.html [Accessed 19 Oct. 2017].</h4>
+			<h4 class="referenceString selectable">Docs.opencv.org. (2017).&nbsp;<em>OpenCV: Image Segmentation with Watershed Algorithm</em>. [online] Available at: https://docs.opencv.org/3.1.0/d3/db4/tutorial_py_watershed.html [Accessed 19 Oct. 2017].</h4>
+			<p>-----------------------------------------------------------------------------------------------------------------------------</p>
+			<p>At first, I attempted&nbsp;to use&nbsp;Image Segmentation with Watershed Algorithm using HSV the result of that gave back an outline of the cups</p>
+			<p><img src="result2.jpg" alt="" /></p>
+			<p>Code :</p>
+			<p># Creating a plain white image<br />WhiteImg = np.zeros(np.shape(img), np.uint8)<br />WhiteImg[:,:] = (255,255,255)</p>
+			<p>HSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)<br />G = cv2.cvtColor(HSV,cv2.COLOR_BGR2GRAY)</p>
+			<p>ret, thresh = cv2.threshold(G,0,255,cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU)</p>
+			<p># noise removal<br />kernel = np.ones((3,3),np.uint8)<br />opening = cv2.morphologyEx(thresh,cv2.MORPH_OPEN,kernel, iterations = 2)</p>
+			<p># sure background area<br />sure_bg = cv2.dilate(opening,kernel,iterations=3)</p>
+			<p># Finding sure foreground area<br />dist_transform = cv2.distanceTransform(opening,cv2.DIST_L2,5)<br />ret, sure_fg = cv2.threshold(dist_transform,0.7*dist_transform.max(),255,0)<br /> <br /># Finding unknown region<br />sure_fg = np.uint8(sure_fg)<br />unknown = cv2.subtract(sure_bg,sure_fg)</p>
+			<p>#Marker labelling<br />ret, markers = cv2.connectedComponents(sure_fg)</p>
+			<p>#Add one to all labels so that sure background is not 0, but 1<br />markers = markers+1</p>
+			<p># Now, mark the region of unknown with zero<br />markers[unknown==255] = 0</p>
+			<p>markers = cv2.watershed(img,markers)<br />WhiteImg[markers == -1] = [255,0,0]</p>
+			<p>cv2.imshow("watershed", WhiteImg)<br />key = cv2.waitKey(0)</p>
+			<p>-----------------------------------------------------------------------------------------------------------------</p>
+			<p>I then Attempted to use a Kernal and Applying the High Pass Filter. The result was that the cups came out looking much better isolated and retained some of their colour and so I'd like to experement with combining the two or looking more into kernals</p>
+			<p>&nbsp;</p>
+			<p><img src="result1.jpg" alt="" /></p>
+			<p>Code:</p>
+			<p># Using Kernal and Applying the High Pass Filter I was able to better isolate the cups<br />k = np.array([[-1,-1,-1], [-1,8,-1], [-1,-1,-1]],<br />dtype=float)<br />F = cv2.filter2D(img,ddepth=-1,kernel=k)</p>
+			<p>cv2.imshow("Kernel", F)<br />key = cv2.waitKey(0)</p>
+			</font></div>
 		</div>
 		
 		<!-- Template Blog -->
